@@ -7,6 +7,7 @@ interface AppConfig {
   apiVersion: string;
 }
 
+// Loads and validates environment configuration
 function loadConfig(): AppConfig {
   const port = parseInt(process.env.PORT ?? '5010', 10);
 
@@ -16,6 +17,7 @@ function loadConfig(): AppConfig {
     );
   }
 
+  // Return normalized app configuration
   return {
     nodeEnv: process.env.NODE_ENV ?? 'development',
     port,

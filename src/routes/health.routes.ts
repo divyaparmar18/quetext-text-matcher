@@ -6,7 +6,7 @@ export function buildHealthRouter(): Router {
   const router = Router();
   const controller = new HealthController();
 
-  // health check route
+  // GET / - Health check endpoint
   router.get('/', controller.check);
 
   return router;

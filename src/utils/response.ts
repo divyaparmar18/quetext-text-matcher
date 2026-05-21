@@ -3,11 +3,13 @@ import { StatusCodes } from 'http-status-codes';
 
 import { ApiErrorResponse, ApiResponse } from '../types/api.types';
 
+//succes reponse
 export function sendSuccess<T>(res: Response, data: T, statusCode: number = StatusCodes.OK): void {
   const body: ApiResponse<T> = { success: true, data };
   res.status(statusCode).json(body);
 }
 
+// error response
 export function sendError(
   res: Response,
   message: string,
