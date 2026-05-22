@@ -88,13 +88,13 @@ POST /compare
 {
   "success": true,
   "data": {
-    "score": 0.85,
+    "score": 1,
     "strategies": {
-      "exact": 0.8,
-      "tokenOverlap": 0.9
+      "exact": 1,
+      "tokenOverlap": 1
     },
-    "matchedTokens": ["example", "text"],
-    "processingMs": 2
+    "matchedTokens": ["text", "here"],
+    "processingMs": 0.0835
   }
 }
 ```
@@ -228,11 +228,3 @@ curl -X POST http://localhost:5010/compare \
 - No external storage or services are required
 
 ---
-
-## Evaluation Alignment
-
-- ✔ Correct scoring logic
-- ✔ Edge cases handled
-- ✔ Clean and readable code
-- ✔ Proper error handling
-- ✔ Unit + API tests included
